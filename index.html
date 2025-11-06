@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ByteNova - Jasa Pengerjaan Tugas Kuliah Profesional, Terpercaya, dan Berkualitas">
+    <meta name="keywords" content="jasa tugas kuliah, skripsi, makalah, jurnal, laporan">
+    <title>ByteNova - Jasa Pengerjaan Tugas Kuliah Profesional</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome untuk icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts - Poppins untuk Heading, Inter untuk Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Link ke CSS External -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ========== FLOATING WHATSAPP BUTTON ========== -->
+    <!-- Tombol melayang di pojok kanan bawah untuk menghubungi admin via WhatsApp -->
+    <div class="whatsapp-float" id="whatsappFloat">
+        <!-- Icon WhatsApp dari Font Awesome -->
+        <a href="https://wa.me/6281234567890?text=Halo%20ByteNova,%20saya%20ingin%20konsultasi" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <!-- Tooltip yang muncul saat hover -->
+        <div class="whatsapp-tooltip">Konsultasi ke Admin</div>
+    </div>
+
+    <!-- ========== NAVIGATION BAR ========== -->
+    <!-- Navbar transparan yang akan berubah solid saat di-scroll -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <!-- Logo Brand -->
+            <a class="navbar-brand d-flex align-items-center" href="#hero">
+                <i class="fas fa-rocket me-2"></i>
+                <span class="brand-text">ByteNova</span>
+            </a>
+
+            <!-- Tombol Toggle untuk Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu Navigasi -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-to-order">Service</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-us">Keunggulan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                    <li class="nav-item">
+                        <!-- CTA Button di Navbar -->
+                        <a class="btn btn-cta ms-lg-3" href="#services">Pesan Sekarang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <!-- Section pembuka dengan headline utama dan CTA -->
+    <section id="hero" class="hero-section">
+        <!-- Background gradient dengan overlay -->
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-7 hero-content">
+                    <!-- Badge/Tag -->
+                    <div class="hero-badge mb-3" data-aos="fade-up">
+                        <i class="fas fa-star me-2"></i>Jasa Terpercaya & Profesional
+                    </div>
+
+                    <!-- Headline Utama -->
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                        Solusi Cerdas untuk <span class="gradient-text">Tugas Kuliah</span> Anda
+                    </h1>
+
+                    <!-- Sub-headline -->
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                        ByteNova hadir sebagai partner terpercaya dalam menyelesaikan berbagai tugas akademik Anda.
+                        Dari jurnal, makalah, hingga skripsi - kami siap membantu dengan kualitas terbaik dan tepat
+                        waktu.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#services" class="btn btn-primary btn-lg me-3 btn-hero-primary">
+                            <i class="fas fa-rocket me-2"></i>Mulai Sekarang
+                        </a>
+                        <a href="#how-to-order" class="btn btn-outline-light btn-lg btn-hero-outline">
+                            <i class="fas fa-play-circle me-2"></i>Cara Pesan
+                        </a>
+                    </div>
+
+                    <!-- Stats/Trust Indicators -->
+                    <div class="hero-stats mt-5" data-aos="fade-up" data-aos-delay="400">
+                        <div class="row g-4">
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">500+</h3>
+                                    <p class="stat-label">Tugas Selesai</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">98%</h3>
+                                    <p class="stat-label">Kepuasan Klien</p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="stat-item">
+                                    <h3 class="stat-number">24/7</h3>
+                                    <p class="stat-label">Layanan Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image/Illustration (Kolom Kanan) -->
+                <div class="col-lg-5 d-none d-lg-block" data-aos="fade-left" data-aos-delay="200">
+                    <div class="hero-image">
+                        <!-- Icon ilustrasi modern -->
+                        <div class="floating-icon icon-1"><i class="fas fa-book"></i></div>
+                        <div class="floating-icon icon-2"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="floating-icon icon-3"><i class="fas fa-laptop-code"></i></div>
+                        <div class="floating-icon icon-4"><i class="fas fa-lightbulb"></i></div>
+                        <div class="hero-circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="500">
+            <a href="#services">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SECTION ========== -->
+    <!-- Section untuk menampilkan paket jasa unggulan dengan carousel -->
+    <section id="services" class="services-section py-5">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Layanan Kami</span>
+                <h2 class="section-title">Paket Jasa Unggulan</h2>
+                <p class="section-description">
+                    Pilih layanan yang sesuai dengan kebutuhan akademik Anda. Semua dikerjakan oleh tim profesional dan
+                    berpengalaman.
+                </p>
+            </div>
+
+            <!-- Service Carousel Container -->
+            <div class="service-carousel-wrapper" data-aos="fade-up" data-aos-delay="100">
+                <!-- Navigation Arrows -->
+                <button class="carousel-nav carousel-nav-prev" id="servicePrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-nav carousel-nav-next" id="serviceNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <!-- Carousel Track -->
+                <div class="service-carousel-track" id="serviceTrack">
+                    <!-- Card 1: Jurnal -->
+                    <div class="service-card-wrapper">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h3 class="service-title">Jurnal Ilmiah</h3>
+                            <p class="service-description">
+                                Penulisan jurnal ilmiah sesuai standar akademik dengan referensi terpercaya dan
+                                metodologi yang tepat.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Format sesuai standar</li>
+                                <li><i class="fas fa-check-circle"></i> Referensi kredibel</li>
+                                <li><i class="fas fa-check-circle"></i> Revisi gratis</li>
+                            </ul>
+                            <a href="https://forms.gle/your-form-id-jurnal" target="_blank" class="btn btn-service">
+                                <i class="fas fa-paper-plane me-2"></i>Pesan Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Makalah -->
+                    <div class="service-card-wrapper">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-scroll"></i>
+                            </div>
+                            <h3 class="service-title">Makalah</h3>
+                            <p class="service-description">
+                                Pembuatan makalah berkualitas dengan pembahasan mendalam dan struktur yang sistematis.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Pembahasan lengkap</li>
+                                <li><i class="fas fa-check-circle"></i> Struktur sistematis</li>
+                                <li><i class="fas fa-check-circle"></i> Deadline tepat waktu</li>
+                            </ul>
+                            <a href="https://forms.gle/your-form-id-jurnal" target="_blank" class="btn btn-service">
+                                <i class="fas fa-paper-plane me-2"></i>Pesan Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Laporan Ilmiah -->
+                    <div class="service-card-wrapper">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="service-title">Laporan Ilmiah</h3>
+                            <p class="service-description">
+                                Penyusunan laporan ilmiah dengan analisis data yang akurat dan presentasi yang
+                                profesional.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Analisis data detail</li>
+                                <li><i class="fas fa-check-circle"></i> Visualisasi grafik</li>
+                                <li><i class="fas fa-check-circle"></i> Format standar</li>
+                            </ul>
+                            <a href="https://forms.gle/your-form-id-laporan-ilmiah" target="_blank"
+                                class="btn btn-service">
+                                <i class="fas fa-paper-plane me-2"></i>Pesan Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Laporan Magang -->
+                    <div class="service-card-wrapper">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h3 class="service-title">Laporan Magang</h3>
+                            <p class="service-description">
+                                Dokumentasi lengkap kegiatan magang dengan analisis reflektif dan profesional.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Dokumentasi lengkap</li>
+                                <li><i class="fas fa-check-circle"></i> Analisis reflektif</li>
+                                <li><i class="fas fa-check-circle"></i> Sesuai guideline</li>
+                            </ul>
+                            <a href="https://forms.gle/your-form-id-laporan-magang" target="_blank"
+                                class="btn btn-service">
+                                <i class="fas fa-paper-plane me-2"></i>Pesan Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Skripsi (Premium) -->
+                    <div class="service-card-wrapper">
+                        <div class="service-card service-card-featured">
+                            <div class="featured-badge">
+                                <i class="fas fa-crown me-1"></i>PREMIUM
+                            </div>
+                            <div class="service-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h3 class="service-title">Skripsi</h3>
+                            <p class="service-description">
+                                Pendampingan lengkap penyusunan skripsi dari proposal hingga sidang dengan bimbingan
+                                intensif.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Bimbingan intensif</li>
+                                <li><i class="fas fa-check-circle"></i> Revisi unlimited</li>
+                                <li><i class="fas fa-check-circle"></i> Konsultasi gratis</li>
+                            </ul>
+                            <a href="https://forms.gle/your-form-id-skripsi" target="_blank" class="btn btn-service">
+                                <i class="fas fa-paper-plane me-2"></i>Pesan Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Tugas Harian -->
+                    <div class="service-card-wrapper">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h3 class="service-title">Tugas Harian</h3>
+                            <p class="service-description">
+                                Bantuan cepat untuk tugas-tugas harian seperti essay, ringkasan, dan soal-soal kuliah.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Pengerjaan cepat</li>
+                                <li><i class="fas fa-check-circle"></i> Harga terjangkau</li>
+                                <li><i class="fas fa-check-circle"></i> Kualitas terjamin</li>
+                            </ul>
+                            <a href="https://forms.gle/your-form-id-tugas-harian" target="_blank"
+                                class="btn btn-service">
+                                <i class="fas fa-paper-plane me-2"></i>Pesan Sekarang
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Indicators/Dots -->
+                <div class="carousel-indicators" id="serviceIndicators"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOW TO ORDER SECTION ========== -->
+    <!-- Section untuk menjelaskan cara pemesanan step by step -->
+    <section id="how-to-order" class="how-to-order-section py-5">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Mudah & Cepat</span>
+                <h2 class="section-title">Cara Pemesanan</h2>
+                <p class="section-description">
+                    Proses pemesanan yang simpel dan efisien, hanya dalam 4 langkah mudah
+                </p>
+            </div>
+
+            <!-- Steps -->
+            <div class="row g-4">
+                <!-- Step 1 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">
+                            <i class="fas fa-mouse-pointer"></i>
+                        </div>
+                        <h3 class="step-title">Pilih Layanan</h3>
+                        <p class="step-description">
+                            Pilih jenis layanan yang Anda butuhkan dari paket yang tersedia
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h3 class="step-title">Isi Form</h3>
+                        <p class="step-description">
+                            Lengkapi detail tugas Anda melalui Google Form yang disediakan
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="step-title">Konsultasi</h3>
+                        <p class="step-description">
+                            Tim kami akan menghubungi untuk konfirmasi dan diskusi detail
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-card">
+                        <div class="step-number">04</div>
+                        <div class="step-icon">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+                        <h3 class="step-title">Terima Hasil</h3>
+                        <p class="step-description">
+                            Dapatkan hasil pengerjaan berkualitas sesuai deadline yang disepakati
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA after steps -->
+            <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="500">
+                <a href="#services" class="btn btn-primary btn-lg">
+                    <i class="fas fa-rocket me-2"></i>Mulai Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT SECTION ========== -->
+    <!-- Section tentang ByteNova -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Kolom Kiri: Konten -->
+                <div class="col-lg-6" data-aos="fade-right">
+                    <span class="section-badge">Tentang Kami</span>
+                    <h2 class="section-title mb-4">Jasa by The Nova</h2>
+                    <p class="about-text mb-4">
+                        ByteNova adalah platform jasa pengerjaan tugas kuliah yang didirikan oleh tim profesional
+                        berpengalaman di bidang akademik. Kami memahami betapa pentingnya kualitas dan ketepatan
+                        waktu dalam setiap tugas akademik.
+                    </p>
+                    <p class="about-text mb-4">
+                        Dengan pengalaman lebih dari 3 tahun, kami telah membantu ratusan mahasiswa dalam
+                        menyelesaikan berbagai jenis tugas kuliah dengan hasil yang memuaskan. Tim kami terdiri
+                        dari lulusan dan akademisi dari berbagai universitas ternama.
+                    </p>
+
+                    <!-- About Features -->
+                    <div class="about-features">
+                        <div class="about-feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Terpercaya</h4>
+                                <p>Reputasi terjaga dengan ratusan klien puas</p>
+                            </div>
+                        </div>
+                        <div class="about-feature-item">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Berkualitas</h4>
+                                <p>Dikerjakan oleh tim profesional berpengalaman</p>
+                            </div>
+                        </div>
+                        <div class="about-feature-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Tepat Waktu</h4>
+                                <p>Komitmen deadline sesuai kesepakatan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Visual/Gambar -->
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-visual">
+                        <!-- Bisa diganti dengan gambar real atau tetap pakai icon -->
+                        <div class="about-image-placeholder">
+                            <i class="fas fa-users-cog"></i>
+                            <h3>Tim Profesional</h3>
+                            <p>Berpengalaman & Terpercaya</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== WHY US SECTION ========== -->
+    <!-- Section keunggulan/mengapa memilih kami -->
+    <section id="why-us" class="why-us-section py-5">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Keunggulan Kami</span>
+                <h2 class="section-title">Mengapa Memilih ByteNova?</h2>
+                <p class="section-description">
+                    Kami memberikan nilai lebih untuk setiap layanan yang Anda pilih
+                </p>
+            </div>
+
+            <!-- Why Us Cards -->
+            <div class="row g-4">
+                <!-- Keunggulan 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3 class="why-title">Tim Ahli</h3>
+                        <p class="why-description">
+                            Dikerjakan oleh lulusan dan akademisi dari universitas terkemuka dengan pengalaman
+                            bertahun-tahun
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Keunggulan 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3 class="why-title">Keamanan Terjamin</h3>
+                        <p class="why-description">
+                            Data dan informasi pribadi Anda dijamin aman dan tidak akan dibagikan kepada pihak ketiga
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Keunggulan 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3 class="why-title">Revisi Gratis</h3>
+                        <p class="why-description">
+                            Kami menyediakan revisi gratis hingga Anda puas dengan hasil pekerjaan yang kami kerjakan
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Keunggulan 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="why-title">Support 24/7</h3>
+                        <p class="why-description">
+                            Tim customer service kami siap membantu Anda kapan saja melalui berbagai channel komunikasi
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Keunggulan 5 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3 class="why-title">Harga Kompetitif</h3>
+                        <p class="why-description">
+                            Kami menawarkan harga yang kompetitif dengan kualitas premium dan berbagai paket pilihan
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Keunggulan 6 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="why-title">Proses Cepat</h3>
+                        <p class="why-description">
+                            Sistem pemesanan yang efisien dan proses pengerjaan yang cepat tanpa mengurangi kualitas
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROMO SECTION ========== -->
+    <!-- Section untuk promo dan penawaran spesial (opsional) -->
+    <section id="promo" class="promo-section py-5">
+        <div class="container">
+            <div class="promo-banner" data-aos="zoom-in">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="promo-content">
+                            <span class="promo-badge">
+                                <i class="fas fa-fire me-2"></i>PROMO SPESIAL
+                            </span>
+                            <h2 class="promo-title">Diskon 20% untuk Pelanggan Baru!</h2>
+                            <p class="promo-description">
+                                Dapatkan potongan harga hingga 20% untuk pemesanan pertama Anda.
+                                Promo terbatas hanya sampai akhir bulan ini!
+                            </p>
+                            <ul class="promo-features">
+                                <li><i class="fas fa-check"></i> Berlaku untuk semua layanan</li>
+                                <li><i class="fas fa-check"></i> Tanpa minimum pembelian</li>
+                                <li><i class="fas fa-check"></i> Bisa digabung dengan revisi gratis</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="promo-cta">
+                            <div class="promo-discount">
+                                <span class="discount-number">20%</span>
+                                <span class="discount-text">OFF</span>
+                            </div>
+                            <a href="#services" class="btn btn-promo">
+                                <i class="fas fa-gift me-2"></i>Klaim Promo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT SECTION ========== -->
+    <!-- Section kontak dan social media -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="section-badge">Hubungi Kami</span>
+                <h2 class="section-title">Mari Berkonsultasi</h2>
+                <p class="section-description">
+                    Kami siap membantu menjawab pertanyaan dan konsultasi Anda
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Contact Info Cards -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3 class="contact-title">WhatsApp</h3>
+                        <p class="contact-info">+62 812-3456-7890</p>
+                        <a href="https://wa.me/6281234567890" target="_blank" class="contact-link">
+                            Chat Sekarang <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="contact-title">Email</h3>
+                        <p class="contact-info">info@bytenova.com</p>
+                        <a href="mailto:info@bytenova.com" class="contact-link">
+                            Kirim Email <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h3 class="contact-title">Instagram</h3>
+                        <p class="contact-info">@bytenova.official</p>
+                        <a href="https://instagram.com/bytenova.official" target="_blank" class="contact-link">
+                            Follow Kami <i class="fas fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-links text-center mt-5" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="social-title mb-4">Ikuti Kami di Social Media</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com/bytenova" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://instagram.com/bytenova.official" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/bytenova" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/bytenova" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://tiktok.com/@bytenova" target="_blank" class="social-icon">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <!-- Footer dengan logo, navigasi, dan copyright -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Footer Brand -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+                        <a href="#hero" class="footer-logo d-flex align-items-center mb-3">
+                            <i class="fas fa-rocket me-2"></i>
+                            <span>ByteNova</span>
+                        </a>
+                        <p class="footer-description">
+                            Solusi cerdas dan terpercaya untuk semua kebutuhan tugas akademik Anda.
+                            Bersama ByteNova, raih kesuksesan akademik dengan mudah.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Footer Links 1 -->
+                <div class="col-lg-2 col-md-6">
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Beranda</a></li>
+                        <li><a href="#services">Layanan</a></li>
+                        <li><a href="#how-to-order">Cara Pesan</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Links 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Layanan</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Jurnal Ilmiah</a></li>
+                        <li><a href="#services">Makalah</a></li>
+                        <li><a href="#services">Laporan Ilmiah</a></li>
+                        <li><a href="#services">Laporan Magang</a></li>
+                        <li><a href="#services">Skripsi</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Contact -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-title">Kontak</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fab fa-whatsapp me-2"></i>
+                            <a href="https://wa.me/6281234567890">+62 812-3456-7890</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope me-2"></i>
+                            <a href="mailto:info@bytenova.com">info@bytenova.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-instagram me-2"></i>
+                            <a href="https://instagram.com/bytenova.official">@bytenova.official</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="copyright-text mb-0">
+                            © 2025 Jasa by The Nova. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                        <div class="footer-social">
+                            <a href="https://facebook.com/bytenova" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a href="https://instagram.com/bytenova.official" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://twitter.com/bytenova" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com/company/bytenova" target="_blank"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ========== JAVASCRIPT LIBRARIES ========== -->
+
+    <!-- jQuery (diperlukan untuk beberapa fungsi Bootstrap dan custom JS) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Bootstrap 5 JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS (Animate On Scroll) Library untuk animasi scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Link ke JavaScript External -->
+    <script src="script.js"></script>
+</body>
+
+</html>
