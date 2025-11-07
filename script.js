@@ -384,6 +384,85 @@ $(document).ready(function () {
         // ... (kode existing lainnya tetap ada)
     });
 
+    /* ========== GOOGLE FORM LINK TRACKING (Analytics) ========== */
+    // Track clicks pada tombol "Pesan Sekarang" untuk analytics
+    $('.btn-service').on('click', function () {
+        var serviceName = $(this).closest('.service-card').find('.service-title').text();
+
+        // Log ke console (bisa diganti dengan Google Analytics event)
+        console.log('Service ordered: ' + serviceName);
+
+        // Jika menggunakan Google Analytics, tambahkan:
+        gtag('event', 'order_click', {
+            'event_category': 'Service',
+            'event_label': serviceName
+        });
+    });
+
+    /* ========== ENHANCED MODAL FUNCTIONALITY ========== */
+    // Improve modal loading and UX
+
+    // Reset iframe when modal is closed
+    $('.modal').on('hidden.bs.modal', function () {
+        var $modal = $(this);
+        var $iframe = $modal.find('.form-iframe');
+        var $loading = $modal.find('.form-loading-overlay');
+
+        // Reset loading state
+        $loading.show().css('display', 'flex');
+
+        // Reset iframe (optional - uncomment if you want to reload form on reopen)
+        var iframeSrc = $iframe.attr('src');
+        $iframe.attr('src', '');
+        setTimeout(function() {
+            $iframe.attr('src', iframeSrc);
+        }, 100);
+    });
+
+    // Track modal open events
+    $('.modal').on('shown.bs.modal', function () {
+        var modalId = $(this).attr('id');
+        var modalTitle = $(this).find('.modal-title').text();
+
+        console.log('Modal opened:', modalTitle);
+
+        // If using Google Analytics:
+        // gtag('event', 'modal_open', {
+        //     'event_category': 'Form',
+        //     'event_label': modalTitle
+        // });
+    });
+
+    // Handle iframe load timeout
+    $('.form-iframe').each(function () {
+        var $iframe = $(this);
+        var $loading = $iframe.siblings('.form-loading-overlay');
+
+        // Set timeout to hide loading if iframe takes too long
+        setTimeout(function () {
+            if ($loading.is(':visible')) {
+                $loading.fadeOut(300);
+                console.log('Iframe loaded or timeout reached');
+            }
+        }, 10000); // 10 seconds timeout
+    });
+
+    // Enhance modal animations
+    $('.modal').on('show.bs.modal', function () {
+        $(this).find('.modal-dialog').css({
+            'transform': 'scale(0.8)',
+            'opacity': '0'
+        });
+    });
+
+    $('.modal').on('shown.bs.modal', function () {
+        $(this).find('.modal-dialog').css({
+            'transform': 'scale(1)',
+            'opacity': '1',
+            'transition': 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+        });
+    });
+
     /* ========== STEP CARD ANIMATION ========== */
     // Animasi hover pada step cards di section "Cara Pemesanan"
     $('.step-card').hover(

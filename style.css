@@ -835,21 +835,362 @@ section {
     }
 }
 
-/* ========== FORM MODAL STYLING ========== */
-.modal-content {
-    border-radius: 16px;
+/* ========== ENHANCED FORM MODAL STYLING ========== */
+
+/* Modal Backdrop Enhancement */
+.modal.show .modal-backdrop {
+    backdrop-filter: blur(8px);
+    background-color: rgba(15, 23, 42, 0.85);
+}
+
+/* Modal Dialog Animation */
+.modal.fade .modal-dialog {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.4s ease;
+}
+
+.modal.show .modal-dialog {
+    transform: scale(1) translateY(0);
+}
+
+/* Modal Content Container */
+.form-modal-content {
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-}
-
-.modal-header {
-  background: linear-gradient(135deg,#7c3aed, #1e3a8a);
-}
-
-.modal-body iframe {
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
     border: none;
+    background: var(--white);
 }
 
+/* Enhanced Modal Header */
+.form-modal-header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 100%);
+    padding: 24px 32px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Background Pattern */
+.form-modal-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 50%);
+    animation: rotate-pattern 20s linear infinite;
+}
+
+@keyframes rotate-pattern {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Modal Title Wrapper */
+.modal-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Icon Circle */
+.modal-icon-circle {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 24px;
+    color: var(--white);
+    box-shadow:
+        0 8px 16px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.modal-title-wrapper:hover .modal-icon-circle {
+    transform: scale(1.05) rotate(5deg);
+}
+
+/* Modal Title */
+.form-modal-header .modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Subtitle */
+.modal-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 4px 0 0;
+    font-weight: 500;
+}
+
+/* Enhanced Close Button */
+.form-modal-header .btn-close {
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-modal-header .btn-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg) scale(1.1);
+}
+
+.form-modal-header .btn-close:focus {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Modal Body */
+.form-modal-body {
+    padding: 0;
+    position: relative;
+    height: 80vh;
+    max-height: 800px;
+    background: #f8fafc;
+}
+
+/* Loading Overlay */
+.form-loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Spinner Container */
+.form-spinner {
+    text-align: center;
+    animation: fade-in-up 0.6s ease;
+}
+
+.form-spinner i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 16px;
+    display: block;
+}
+
+.form-spinner p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    font-weight: 500;
+    margin: 0;
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Iframe Styling */
+.form-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: var(--white);
+    opacity: 0;
+    animation: fade-in 0.5s ease 0.3s forwards;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Enhanced Modal Footer */
+.form-modal-footer {
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.02));
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-info,
+.footer-help {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.footer-info i {
+    color: var(--success-color);
+    font-size: 1.1rem;
+}
+
+.footer-help i {
+    color: #25d366;
+    font-size: 1.1rem;
+}
+
+.footer-help a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-help a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* ========== RESPONSIVE DESIGN FOR MODALS ========== */
+
+/* Tablet */
+@media (max-width: 991px) {
+    .form-modal-body {
+        height: 70vh;
+        max-height: 700px;
+    }
+
+    .form-modal-header {
+        padding: 20px 24px;
+    }
+
+    .modal-icon-circle {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+    }
+
+    .form-modal-header .modal-title {
+        font-size: 1.3rem;
+    }
+
+    .modal-subtitle {
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+
+    .form-modal-body {
+        height: 65vh;
+        max-height: 600px;
+    }
+
+    .form-modal-header {
+        padding: 16px 20px;
+    }
+
+    .modal-title-wrapper {
+        gap: 12px;
+    }
+
+    .modal-icon-circle {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
+
+    .form-modal-header .modal-title {
+        font-size: 1.1rem;
+    }
+
+    .modal-subtitle {
+        font-size: 0.8rem;
+    }
+
+    .form-modal-header .btn-close {
+        width: 36px;
+        height: 36px;
+    }
+
+    .form-modal-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 16px 20px;
+        gap: 12px;
+    }
+
+    .footer-info,
+    .footer-help {
+        font-size: 0.85rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 575px) {
+    .form-modal-body {
+        height: calc(100vh - 200px);
+        max-height: none;
+    }
+
+    .form-spinner i {
+        font-size: 2.5rem;
+    }
+
+    .form-spinner p {
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 400px) {
+    .modal-icon-circle {
+        display: none;
+    }
+
+    .modal-title-wrapper {
+        gap: 0;
+    }
+}
 
 /* ========== HOW TO ORDER SECTION ========== */
 /* Section cara pemesanan dengan step by step */

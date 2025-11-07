@@ -213,8 +213,7 @@
                                 <li><i class="fas fa-check-circle"></i> Struktur sistematis</li>
                                 <li><i class="fas fa-check-circle"></i> Deadline tepat waktu</li>
                             </ul>
-                            <a href="#" class="btn btn-service" data-bs-toggle="modal"
-                                data-bs-target="#formMakalah">
+                            <a href="#" class="btn btn-service" data-bs-toggle="modal" data-bs-target="#formMakalah">
                                 <i class="fas fa-paper-plane me-2"></i>Pesan Sekarang
                             </a>
                         </div>
@@ -370,45 +369,103 @@
     <!-- ========== MODAL FORM: JURNAL ILMIAH ========== -->
     <!-- Modal 1: Jurnal -->
     <div class="modal fade" id="formJurnalModal" tabindex="-1" aria-labelledby="formJurnalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="formJurnalLabel">
-                        <i class="fas fa-file-alt me-2"></i> Form Pemesanan – Jurnal Ilmiah
-                    </h5>
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content form-modal-content">
+                <!-- Enhanced Header -->
+                <div class="modal-header form-modal-header">
+                    <div class="modal-title-wrapper">
+                        <div class="modal-icon-circle">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div>
+                            <h5 class="modal-title" id="formJurnalLabel">Form Pemesanan</h5>
+                            <p class="modal-subtitle">Jurnal Ilmiah</p>
+                        </div>
+                    </div>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                        aria-label="Tutup formulir pemesanan jurnal ilmiah"></button>
                 </div>
-                <div class="modal-body p-0" style="height: 80vh;">
+
+                <!-- Modal Body with Loading -->
+                <div class="modal-body form-modal-body">
+                    <!-- Loading Spinner -->
+                    <div class="form-loading-overlay">
+                        <div class="form-spinner">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Memuat Formulir...</p>
+                        </div>
+                    </div>
+
                     <!-- Embed Google Form -->
                     <iframe
                         src="https://docs.google.com/forms/d/e/1FAIpQLSerb53N4cfy9Io5bfk0woGGeOsFEmqtaHUpFhXdM8NhjCgqoQ/viewform?embedded=true"
-                        width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">
-                        Memuat Formulir…
+                        class="form-iframe" title="Form Pemesanan Jurnal Ilmiah" loading="lazy"
+                        onload="this.previousElementSibling.style.display='none'">
                     </iframe>
+                </div>
+
+                <!-- Footer Info (Optional) -->
+                <div class="modal-footer form-modal-footer">
+                    <div class="footer-info">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Data Anda aman dan terlindungi</span>
+                    </div>
+                    <div class="footer-help">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Butuh bantuan? <a href="https://wa.me/6281234567890" target="_blank">Chat Admin</a></span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Modal 2: Makalah -->
-    <div class="modal fade" id="formMakalah" tabindex="-1" aria-labelledby="formMakalah" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="formMakalah">
-                        <i class="fas fa-scroll"></i> Form Pemesanan – Makalah
-                    </h5>
+    <div class="modal fade" id="formMakalah" tabindex="-1" aria-labelledby="formMakalahLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content form-modal-content">
+                <!-- Enhanced Header -->
+                <div class="modal-header form-modal-header">
+                    <div class="modal-title-wrapper">
+                        <div class="modal-icon-circle">
+                            <i class="fas fa-scroll"></i>
+                        </div>
+                        <div>
+                            <h5 class="modal-title" id="formMakalahLabel">Form Pemesanan</h5>
+                            <p class="modal-subtitle">Makalah</p>
+                        </div>
+                    </div>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                        aria-label="Tutup formulir pemesanan makalah"></button>
                 </div>
-                <div class="modal-body p-0" style="height: 80vh;">
+
+                <!-- Modal Body with Loading -->
+                <div class="modal-body form-modal-body">
+                    <!-- Loading Spinner -->
+                    <div class="form-loading-overlay">
+                        <div class="form-spinner">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Memuat Formulir...</p>
+                        </div>
+                    </div>
+
                     <!-- Embed Google Form -->
                     <iframe
                         src="https://docs.google.com/forms/d/e/1FAIpQLSdVtKbnzWXC0m_zIbNQyD92vErOU_iXuFSftAfypUQZ95hFwA/viewform?embedded=true"
-                        width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">
-                        Memuat Formulir…
+                        class="form-iframe" title="Form Pemesanan Makalah" loading="lazy"
+                        onload="this.previousElementSibling.style.display='none'">
                     </iframe>
+                </div>
+
+                <!-- Footer Info (Optional) -->
+                <div class="modal-footer form-modal-footer">
+                    <div class="footer-info">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Data Anda aman dan terlindungi</span>
+                    </div>
+                    <div class="footer-help">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Butuh bantuan? <a href="https://wa.me/6281234567890" target="_blank">Chat Admin</a></span>
+                    </div>
                 </div>
             </div>
         </div>
