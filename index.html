@@ -10,6 +10,8 @@
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
 
     <!-- Font Awesome untuk icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -112,7 +114,7 @@
                         <div class="row g-4">
                             <div class="col-4">
                                 <div class="stat-item">
-                                    <h3 class="stat-number">500+</h3>
+                                    <h3 class="stat-number">100+</h3>
                                     <p class="stat-label">Tugas Selesai</p>
                                 </div>
                             </div>
@@ -144,13 +146,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="500">
-            <a href="#services">
-                <i class="fas fa-chevron-down"></i>
-            </a>
         </div>
     </section>
 
@@ -196,7 +191,8 @@
                                 <li><i class="fas fa-check-circle"></i> Referensi kredibel</li>
                                 <li><i class="fas fa-check-circle"></i> Revisi gratis</li>
                             </ul>
-                            <a href="https://forms.gle/your-form-id-jurnal" target="_blank" class="btn btn-service">
+                            <a href="#" class="btn btn-service" data-bs-toggle="modal"
+                                data-bs-target="#formJurnalModal">
                                 <i class="fas fa-paper-plane me-2"></i>Pesan Sekarang
                             </a>
                         </div>
@@ -217,7 +213,8 @@
                                 <li><i class="fas fa-check-circle"></i> Struktur sistematis</li>
                                 <li><i class="fas fa-check-circle"></i> Deadline tepat waktu</li>
                             </ul>
-                            <a href="https://forms.gle/your-form-id-jurnal" target="_blank" class="btn btn-service">
+                            <a href="#" class="btn btn-service" data-bs-toggle="modal"
+                                data-bs-target="#formMakalah">
                                 <i class="fas fa-paper-plane me-2"></i>Pesan Sekarang
                             </a>
                         </div>
@@ -227,7 +224,7 @@
                     <div class="service-card-wrapper">
                         <div class="service-card">
                             <div class="service-icon">
-                                <i class="fas fa-chart-line"></i>
+                                <i class="bi bi-clipboard-data-fill"></i>
                             </div>
                             <h3 class="service-title">Laporan Ilmiah</h3>
                             <p class="service-description">
@@ -275,7 +272,7 @@
                                 <i class="fas fa-crown me-1"></i>PREMIUM
                             </div>
                             <div class="service-icon">
-                                <i class="fas fa-book-open"></i>
+                                <i class="bi bi-journal-bookmark-fill"></i>
                             </div>
                             <h3 class="service-title">Skripsi</h3>
                             <p class="service-description">
@@ -314,6 +311,54 @@
                             </a>
                         </div>
                     </div>
+
+                    <!-- Card 7: PPT -->
+                    <div class="service-card-wrapper">
+                        <div class="service-card">
+                            <div class="service-icon">
+                                <i class="bi bi-file-earmark-slides-fill"></i>
+                            </div>
+                            <h3 class="service-title">Presentasi PPT</h3>
+                            <p class="service-description">
+                                Penyusunan PPT kamu dengan analisis data yang akurat dan presentasi yang
+                                profesional.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Revisi unlimited</li>
+                                <li><i class="fas fa-check-circle"></i> Animasi menarik</li>
+                                <li><i class="fas fa-check-circle"></i> Kualitas terjamin</li>
+                            </ul>
+                            <a href="https://forms.gle/your-form-id-tugas-harian" target="_blank"
+                                class="btn btn-service">
+                                <i class="fas fa-paper-plane me-2"></i>Pesan Sekarang
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 7: Project Pemrograman -->
+                    <div class="service-card-wrapper">
+                        <div class="service-card service-card-featured">
+                            <div class="featured-badge">
+                                <i class="fas fa-crown me-1"></i>PREMIUM
+                            </div>
+                            <div class="service-icon">
+                                <i class="bi bi-file-earmark-code-fill"></i>
+                            </div>
+                            <h3 class="service-title">Project Pemrograman</h3>
+                            <p class="service-description">
+                                Layanan pembuatan project pemrograman untuk tugas kuliah maupun kebutuhan bisnis
+                                dengan hasil efisien, dan mudah dipahami.
+                            </p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check-circle"></i> Clean code</li>
+                                <li><i class="fas fa-check-circle"></i> Tersedia semua bahasa</li>
+                                <li><i class="fas fa-check-circle"></i> Konsultasi gratis</li>
+                            </ul>
+                            <a href="https://forms.gle/your-form-id-skripsi" target="_blank" class="btn btn-service">
+                                <i class="fas fa-paper-plane me-2"></i>Pesan Sekarang
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Carousel Indicators/Dots -->
@@ -321,6 +366,53 @@
             </div>
         </div>
     </section>
+
+    <!-- ========== MODAL FORM: JURNAL ILMIAH ========== -->
+    <!-- Modal 1: Jurnal -->
+    <div class="modal fade" id="formJurnalModal" tabindex="-1" aria-labelledby="formJurnalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="formJurnalLabel">
+                        <i class="fas fa-file-alt me-2"></i> Form Pemesanan – Jurnal Ilmiah
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0" style="height: 80vh;">
+                    <!-- Embed Google Form -->
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSerb53N4cfy9Io5bfk0woGGeOsFEmqtaHUpFhXdM8NhjCgqoQ/viewform?embedded=true"
+                        width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">
+                        Memuat Formulir…
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Makalah -->
+    <div class="modal fade" id="formMakalah" tabindex="-1" aria-labelledby="formMakalah" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="formMakalah">
+                        <i class="fas fa-scroll"></i> Form Pemesanan – Makalah
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0" style="height: 80vh;">
+                    <!-- Embed Google Form -->
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSdVtKbnzWXC0m_zIbNQyD92vErOU_iXuFSftAfypUQZ95hFwA/viewform?embedded=true"
+                        width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0">
+                        Memuat Formulir…
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ========== HOW TO ORDER SECTION ========== -->
     <!-- Section untuk menjelaskan cara pemesanan step by step -->
@@ -585,18 +677,38 @@
                         </div>
                     </div>
                     <div class="col-lg-4 text-center">
-                        <div class="promo-cta">
-                            <div class="promo-discount">
+                        <div class="promo-discount">
+                            <!-- Glowing Ring -->
+                            <div class="glow-ring"></div>
+
+                            <!-- Background Icons -->
+                            <div class="icon-bg">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-gift"></i>
+                                <i class="fas fa-tag"></i>
+                                <i class="fas fa-percent"></i>
+                            </div>
+
+                            <!-- Sparkles -->
+                            <span class="sparkle"></span>
+                            <span class="sparkle"></span>
+                            <span class="sparkle"></span>
+                            <span class="sparkle"></span>
+
+                            <!-- Main Content -->
+                            <div class="discount-content">
+                                <i class="fas fa-star star-icon"></i>
                                 <span class="discount-number">20%</span>
                                 <span class="discount-text">OFF</span>
                             </div>
-                            <a href="#services" class="btn btn-promo">
-                                <i class="fas fa-gift me-2"></i>Klaim Promo
-                            </a>
                         </div>
+                        <a href="#services" class="btn btn-promo">
+                            <i class="fas fa-gift me-2"></i>Klaim Promo
+                        </a>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
