@@ -410,7 +410,7 @@ $(document).ready(function () {
 
         // Reset loading state
         $loading.show().css('display', 'flex');
-
+        
         // Reset iframe (optional - uncomment if you want to reload form on reopen)
         var iframeSrc = $iframe.attr('src');
         $iframe.attr('src', '');
@@ -423,7 +423,7 @@ $(document).ready(function () {
     $('.modal').on('shown.bs.modal', function () {
         var modalId = $(this).attr('id');
         var modalTitle = $(this).find('.modal-title').text();
-
+        
         console.log('Modal opened:', modalTitle);
 
         // If using Google Analytics:
@@ -434,12 +434,12 @@ $(document).ready(function () {
     });
 
     // Handle iframe load timeout
-    $('.form-iframe').each(function () {
+    $('.form-iframe').each(function() {
         var $iframe = $(this);
         var $loading = $iframe.siblings('.form-loading-overlay');
-
+        
         // Set timeout to hide loading if iframe takes too long
-        setTimeout(function () {
+        setTimeout(function() {
             if ($loading.is(':visible')) {
                 $loading.fadeOut(300);
                 console.log('Iframe loaded or timeout reached');
