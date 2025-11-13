@@ -235,8 +235,7 @@
                                 <li><i class="fas fa-check-circle"></i> Visualisasi grafik</li>
                                 <li><i class="fas fa-check-circle"></i> Format standar</li>
                             </ul>
-                            <a href="https://forms.gle/your-form-id-laporan-ilmiah" target="_blank"
-                                class="btn btn-service">
+                            <a href="#" class="btn btn-service" data-bs-toggle="modal" data-bs-target="#formLaporanIlmiah">
                                 <i class="fas fa-paper-plane me-2"></i>Pesan Sekarang
                             </a>
                         </div>
@@ -257,8 +256,7 @@
                                 <li><i class="fas fa-check-circle"></i> Analisis reflektif</li>
                                 <li><i class="fas fa-check-circle"></i> Sesuai guideline</li>
                             </ul>
-                            <a href="https://forms.gle/your-form-id-laporan-magang" target="_blank"
-                                class="btn btn-service">
+                            <a href="#" class="btn btn-service" data-bs-toggle="modal" data-bs-target="#formLaporanMagang">
                                 <i class="fas fa-paper-plane me-2"></i>Pesan Sekarang
                             </a>
                         </div>
@@ -459,6 +457,118 @@
                         src="https://docs.google.com/forms/d/e/1FAIpQLSdVtKbnzWXC0m_zIbNQyD92vErOU_iXuFSftAfypUQZ95hFwA/viewform?embedded=true"
                         class="form-iframe"
                         title="Form Pemesanan Makalah"
+                        loading="lazy"
+                        onload="this.previousElementSibling.style.display='none'">
+                    </iframe>
+                </div>
+
+                <!-- Footer Info (Optional) -->
+                <div class="modal-footer form-modal-footer">
+                    <div class="footer-info">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Data Anda aman dan terlindungi</span>
+                    </div>
+                    <div class="footer-help">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Butuh bantuan? <a href="https://wa.me/6281234567890" target="_blank">Chat Admin</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Laporan Ilmiah -->
+    <div class="modal fade" id="formLaporanIlmiah" tabindex="-1" aria-labelledby="formLaporanIlmiahLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content form-modal-content">
+                <!-- Enhanced Header -->
+                <div class="modal-header form-modal-header">
+                    <div class="modal-title-wrapper">
+                        <div class="modal-icon-circle">
+                            <i class="bi bi-clipboard-data-fill"></i>
+                        </div>
+                        <div>
+                            <h5 class="modal-title" id="formLaporanIlmiahLabel">Form Pemesanan</h5>
+                            <p class="modal-subtitle">Laporan Ilmiah</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close-custom" data-bs-dismiss="modal"
+                        aria-label="Tutup formulir pemesanan Laporan Ilmiah">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <!-- Modal Body with Loading -->
+                <div class="modal-body form-modal-body">
+                    <!-- Loading Spinner -->
+                    <div class="form-loading-overlay">
+                        <div class="form-spinner">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Memuat Formulir...</p>
+                        </div>
+                    </div>
+
+                    <!-- Embed Google Form -->
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSeZtmTKdd9DzcFnwNy_wSVmgc8xh2Fwisw7N71njZPo45PBQg/viewform?embedded=true"
+                        class="form-iframe"
+                        title="Form Pemesanan Laporan Ilmiah"
+                        loading="lazy"
+                        onload="this.previousElementSibling.style.display='none'">
+                    </iframe>
+                </div>
+
+                <!-- Footer Info (Optional) -->
+                <div class="modal-footer form-modal-footer">
+                    <div class="footer-info">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Data Anda aman dan terlindungi</span>
+                    </div>
+                    <div class="footer-help">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Butuh bantuan? <a href="https://wa.me/6281234567890" target="_blank">Chat Admin</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Laporan Magang -->
+    <div class="modal fade" id="formLaporanMagang" tabindex="-1" aria-labelledby="formLaporanMagangLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content form-modal-content">
+                <!-- Enhanced Header -->
+                <div class="modal-header form-modal-header">
+                    <div class="modal-title-wrapper">
+                        <div class="modal-icon-circle">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div>
+                            <h5 class="modal-title" id="formLaporanMagangLabel">Form Pemesanan</h5>
+                            <p class="modal-subtitle">Laporan Magang</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close-custom" data-bs-dismiss="modal"
+                        aria-label="Tutup formulir pemesanan Laporan Magang">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <!-- Modal Body with Loading -->
+                <div class="modal-body form-modal-body">
+                    <!-- Loading Spinner -->
+                    <div class="form-loading-overlay">
+                        <div class="form-spinner">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Memuat Formulir...</p>
+                        </div>
+                    </div>
+
+                    <!-- Embed Google Form -->
+                    <iframe
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfFoCLzOT-Y6QQz5aPVtvXkVze7x6wnxrHkzQtRTK4TXlr0yg/viewform?embedded=true"
+                        class="form-iframe"
+                        title="Form Pemesanan Laporan Magang"
                         loading="lazy"
                         onload="this.previousElementSibling.style.display='none'">
                     </iframe>
