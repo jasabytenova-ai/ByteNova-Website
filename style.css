@@ -835,6 +835,372 @@ section {
     }
 }
 
+/* ========== URGENT DEADLINE CARD STYLING ========== */
+
+/* Urgent Card Container */
+.service-card-urgent {
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 1) 0%, 
+        rgba(255, 250, 245, 1) 100%);
+    border: 3px solid #ef4444;
+    box-shadow: 
+        0 8px 32px rgba(239, 68, 68, 0.3),
+        0 0 0 1px rgba(239, 68, 68, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card-urgent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(239, 68, 68, 0.1),
+        transparent
+    );
+    animation: urgent-shine 3s infinite;
+}
+
+/* Urgent Badge */
+.urgent-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: var(--white);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 
+        0 4px 12px rgba(239, 68, 68, 0.4),
+        0 0 20px rgba(239, 68, 68, 0.2);
+    animation: urgent-badge-pulse 1.5s ease-in-out infinite;
+    z-index: 3;
+}
+
+.urgent-badge i {
+    font-size: 13px;
+    animation: urgent-bolt-shake 0.8s ease-in-out infinite;
+}
+
+/* Fire Background Effect */
+.urgent-fire-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.urgent-fire-bg i {
+    position: absolute;
+    font-size: 80px;
+    color: #ef4444;
+}
+
+.urgent-fire-bg i:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation: urgent-fire-flicker 2s ease-in-out infinite;
+}
+
+.urgent-fire-bg i:nth-child(2) {
+    top: 50%;
+    right: 10%;
+    animation: urgent-fire-flicker 2.5s ease-in-out infinite 0.5s;
+}
+
+.urgent-fire-bg i:nth-child(3) {
+    bottom: 10%;
+    left: 30%;
+    animation: urgent-fire-flicker 2.2s ease-in-out infinite 1s;
+}
+
+/* Urgent Icon Styling */
+.urgent-icon {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    box-shadow: 
+        0 6px 20px rgba(239, 68, 68, 0.4),
+        0 0 30px rgba(239, 68, 68, 0.2);
+    animation: urgent-icon-bounce 2s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+
+.urgent-icon::after {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border-radius: inherit;
+    background: inherit;
+    opacity: 0;
+    animation: urgent-icon-pulse 2s ease-out infinite;
+}
+
+/* Service Features Icons */
+.service-card-urgent .service-features li i {
+    color: #ef4444;
+    animation: urgent-feature-pop 0.6s ease-out backwards;
+}
+
+.service-card-urgent .service-features li:nth-child(1) i {
+    animation-delay: 0.1s;
+}
+
+.service-card-urgent .service-features li:nth-child(2) i {
+    animation-delay: 0.2s;
+}
+
+.service-card-urgent .service-features li:nth-child(3) i {
+    animation-delay: 0.3s;
+}
+
+/* Urgent Button */
+.btn-urgent {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: var(--white);
+    box-shadow: 
+        0 6px 20px rgba(239, 68, 68, 0.4),
+        0 0 30px rgba(239, 68, 68, 0.2);
+    position: relative;
+    overflow: hidden;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 2px solid transparent;
+    animation: urgent-btn-glow 2s ease-in-out infinite;
+}
+
+.btn-urgent::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn-urgent:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-urgent:hover {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: var(--white);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 
+        0 10px 30px rgba(239, 68, 68, 0.5),
+        0 0 40px rgba(239, 68, 68, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-urgent span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-urgent i {
+    position: relative;
+    z-index: 1;
+}
+
+/* Timer Indicator */
+.urgent-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 10px 16px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    border-radius: 50px;
+    color: #dc2626;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.urgent-timer i {
+    animation: urgent-timer-tick 1s steps(1) infinite;
+}
+
+/* ========== ANIMATIONS ========== */
+
+@keyframes urgent-shine {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+@keyframes urgent-badge-pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 
+            0 4px 12px rgba(239, 68, 68, 0.4),
+            0 0 20px rgba(239, 68, 68, 0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 
+            0 6px 16px rgba(239, 68, 68, 0.5),
+            0 0 30px rgba(239, 68, 68, 0.4);
+    }
+}
+
+@keyframes urgent-bolt-shake {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-15deg);
+    }
+    75% {
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes urgent-fire-flicker {
+    0%, 100% {
+        opacity: 0.03;
+        transform: scale(1) translateY(0);
+    }
+    50% {
+        opacity: 0.08;
+        transform: scale(1.1) translateY(-10px);
+    }
+}
+
+@keyframes urgent-icon-bounce {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) scale(1.05);
+    }
+}
+
+@keyframes urgent-icon-pulse {
+    0% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+@keyframes urgent-feature-pop {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes urgent-btn-glow {
+    0%, 100% {
+        box-shadow: 
+            0 6px 20px rgba(239, 68, 68, 0.4),
+            0 0 30px rgba(239, 68, 68, 0.2);
+    }
+    50% {
+        box-shadow: 
+            0 8px 25px rgba(239, 68, 68, 0.5),
+            0 0 40px rgba(239, 68, 68, 0.3);
+    }
+}
+
+@keyframes urgent-timer-tick {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0.3;
+    }
+}
+
+/* Hover Effects for Urgent Card */
+.service-card-urgent:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 
+        0 12px 40px rgba(239, 68, 68, 0.4),
+        0 0 0 3px rgba(239, 68, 68, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8);
+    border-color: #dc2626;
+}
+
+.service-card-urgent:hover .urgent-icon {
+    transform: scale(1.15) rotate(5deg);
+    animation: urgent-icon-bounce 1s ease-in-out infinite;
+}
+
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+
+@media (max-width: 767px) {
+    .urgent-badge {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
+    
+    .urgent-pulse-ring {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .urgent-fire-bg i {
+        font-size: 60px;
+    }
+    
+    .btn-urgent {
+        font-size: 0.95rem;
+        padding: 12px 20px;
+    }
+    
+    .urgent-timer {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .service-card-urgent {
+        border-width: 2px;
+    }
+    
+    .urgent-badge {
+        top: 12px;
+        right: 12px;
+    }
+}
+
 /* ========== ENHANCED FORM MODAL STYLING ========== */
 
 /* Modal Backdrop Enhancement */
